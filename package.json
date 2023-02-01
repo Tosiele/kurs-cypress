@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Tosiele/kurs-cypress#readme",
   "devDependencies": {
-    "cypress": "^12.5.0"
+    "cypress": "^12.5.0",
+    "@faker-js/faker": "^7.6.0"
   }
 }
