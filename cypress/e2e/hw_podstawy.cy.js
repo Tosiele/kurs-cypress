@@ -3,8 +3,7 @@ describe('home work for basics', () => {
         
         cy.visit('https://fabrykatestow.pl/');
         cy.get('span').contains('POKAŻ CZEGO SIĘ NAUCZĘ').eq(0).click({force: true});
-        cy.scrollTo('.elementor-background-overlay');
-        cy.screenshot();
+        cy.get('div[class="elementor-background-overlay"]').eq(1).screenshot({force: true});
 
 
     })
