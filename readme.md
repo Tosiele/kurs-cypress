@@ -65,3 +65,30 @@
 - cy.getCookie(*nazwa ciastka*) -> pobiera konkretne cookie
 - cy.getAllLocalStorage() -> pobiera wszystko co mamy w local storage
 - informacje te są wyświetlane w zakładce console
+
+---
+
+## Moduł 3 - *rozszerzenie*
+### Testowanie zewnętrznego API
+#### Metoda get
+- metoda get polega na pobieraniu paczki informacji z pod danego urla
+- jeżeli wysyłamy cy.request(), otrzymujemy response
+- cy.request(*url*).then((response) => {}) --> po wykonaniu request, na podstawie responsa wykonamy dane czynności
+    - => {const body = response.body
+    
+        cy.log(body) } --> wyświetli response w postaci np array (ale z ilością elementów a nie zawartością) jeśli pod url znajduje się array
+- JSON.stringify(*array*) -> zamienia array na stringa
+- expect(response.status).to.eq(200) --> spodziewam się że status zapytania będzie 200
+#### Metoda post
+- metoda post polega na wysylaniu paczki informacji pod dany url
+- to samo ce get tylko w drugą stronę
+- cy.request({
+    method: 'POST',
+    url: *url*
+    body: JSON.stringify({
+        title: 'smf',
+        body: 'other words', --> to są wymagania dla danego api, dla innych model posta może wyglądać inaczej
+        userID: 1
+    })
+    headers: {'Content-type': 'application/json'} --> określa typ nagłówków - json
+})
