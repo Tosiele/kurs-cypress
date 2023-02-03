@@ -21,6 +21,8 @@
         *kroki przypadku testowego*
     
         })
+- it.only() -> podczas testowania przechodzi tylko przez ten przypadek testowy
+- xit() -> podczas testowania ignoruje ten przypadek testowy
 - decribe('*nazwa scenariusza*', () => {
 
      *przypadki testowe*   
