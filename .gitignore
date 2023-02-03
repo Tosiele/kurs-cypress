@@ -2,3 +2,4 @@
 /cypress/videos/*.mp4
 /cypress/screenshots/*
 /.idea/
+*node_modules/*
