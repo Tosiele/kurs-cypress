@@ -96,13 +96,18 @@ describe('first site automated', () => {
 
     })
 
-    it('tests add/remove elements section', () => {
+    it.only('tests add/remove elements section', () => {
         const homePage = new HomePage();
         homePage.clickAddandRemoveTab();
 
+        const addAndRemoveElementsPage = new AddAndRemoveElementsPage();
+        addAndRemoveElementsPage.addElement();
+        addAndRemoveElementsPage.addElement();
+        addAndRemoveElementsPage.deleteElement();
+
     })
 
-    it.only('tests status codes section', () => {
+    it('tests status codes section', () => {
         const homePage = new HomePage();
         homePage.clickStatusCodesTab();
         cy.wait(1000)
