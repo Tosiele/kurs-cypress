@@ -11,6 +11,7 @@ class FormPage {
         cy.get(firstNameInput).type('text');
 
         cy.get(submitButton).click();
+        //doesn't have assertion
     }
 
     inputOnlyLastName() {
@@ -20,6 +21,7 @@ class FormPage {
         cy.get(lastNameInput).type('text');
 
         cy.get(submitButton).click();
+        //doesn't have assertion
     }
 
     inputBothNames() {
