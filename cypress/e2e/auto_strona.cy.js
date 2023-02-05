@@ -54,10 +54,13 @@ describe('first site automated', () => {
         inputPage.typeLetterToField();
     })
     
-    it('tests basic auth section', () => {
+    it.only('tests basic auth section', () => {
         const homePage = new HomePage();
         homePage.clickBasicAuthTab();
-    
+
+        const basicAuthPage = new BasicAuthPage();
+        basicAuthPage.inputInvalidCredentials()
+        basicAuthPage.inputValidCredentials();
     })
     
     it('tests form section', () => {
