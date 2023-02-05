@@ -1,5 +1,7 @@
 const firstNameInput = '#fname'
 const lastNameInput = '#lname'
+const lastNameInputInvalid = '#lname:invalid'
+const firstNameInputInvalid = '#fname:invalid'
 const submitButton = '#formSubmitButton'
 
 class FormPage {
@@ -11,7 +13,7 @@ class FormPage {
         cy.get(firstNameInput).type('text');
 
         cy.get(submitButton).click();
-        //doesn't have assertion
+        cy.get(lastNameInputInvalid).should('exist')
     }
 
     inputOnlyLastName() {
@@ -21,7 +23,7 @@ class FormPage {
         cy.get(lastNameInput).type('text');
 
         cy.get(submitButton).click();
-        //doesn't have assertion
+        cy.get(firstNameInputInvalid).should('exist')
     }
 
     inputBothNames() {

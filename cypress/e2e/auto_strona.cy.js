@@ -32,6 +32,10 @@ describe('first site automated', () => {
         const homePage = new HomePage();
         homePage.clickDatePickerTab();
 
+        const datePickerPage = new DatePickerPage();
+        datePickerPage.pickCorrectDate();
+        datePickerPage.pickIncorrectDate();
+
     })
 
     it('testes hovers section', () => {
@@ -63,7 +67,7 @@ describe('first site automated', () => {
         basicAuthPage.inputValidCredentials();
     })
     
-    it('tests form section', () => {
+    it.only('tests form section', () => {
         const homePage = new HomePage();
         homePage.clickFormTab();
 
@@ -90,7 +94,7 @@ describe('first site automated', () => {
         keyPressesPage.pressKey();
     })
     
-    it.only('tests drag and drop section', () => {
+    it('tests drag and drop section', () => {
         const homePage = new HomePage();
         homePage.clickDragAndDropTab();
 
