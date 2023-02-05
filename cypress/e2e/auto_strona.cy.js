@@ -82,7 +82,7 @@ describe('first site automated', () => {
         dropdownListPage.chooseSecondOption();
     })
 
-    it.only('tests key presses section', () => {
+    it('tests key presses section', () => {
         const homePage = new HomePage();
         homePage.clickKeyPressesTab();
 
@@ -102,10 +102,16 @@ describe('first site automated', () => {
 
     })
 
-    it('tests status codes section', () => {
+    it.only('tests status codes section', () => {
         const homePage = new HomePage();
         homePage.clickStatusCodesTab();
+        cy.wait(1000)
 
+        const statusCodesPage = new StatusCodesPage();
+        statusCodesPage.click200StatusCode();
+        statusCodesPage.click305StatusCode();
+        statusCodesPage.click404StatusCode();
+        statusCodesPage.click500StatusCode();
     })
 
 });
