@@ -90,13 +90,15 @@ describe('first site automated', () => {
         keyPressesPage.pressKey();
     })
     
-    it('tests drag and drop section', () => {
+    it.only('tests drag and drop section', () => {
         const homePage = new HomePage();
         homePage.clickDragAndDropTab();
 
+        const dragAndDropPage = new DragAndDropPage();
+
     })
 
-    it.only('tests add/remove elements section', () => {
+    it('tests add/remove elements section', () => {
         const homePage = new HomePage();
         homePage.clickAddandRemoveTab();
 
