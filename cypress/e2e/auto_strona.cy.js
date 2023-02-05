@@ -27,4 +27,14 @@ describe('first site automated', () => {
         checkbox.uncheckBoxTwo();
     })
 
+    it('tests dropdown list section', () => {
+
+
+    })
+
+    it('testes hovers section', () => {
+
+
+    })
+    
 });
