@@ -51,6 +51,7 @@
     - .eq('*numer wystąpienia elementu liczony od 0*') -> który element z dostępnych na stronie mam wziąć jeśli jest kilka wystąpień tego samego elementu
     - .first() -> bierze pierwsze wstąpnienie danego elementu
     - .last() -> bierze ostatnie wystąpienie danego elementu
+    - .invoke() -> wywołuje funkcję na wcześniej znalezionym obiekcie
 - cy.url -> pobiera url strony na któej się znajduje
 - cy.log(*tekst*) -> wypisuje tekst w teście
 - cy.request('*url*') -> wykonuje zapytanie pod konkretny adres, defaultowa metoda to get, wyświetla kod HTPP requesta (200, 400, 500)

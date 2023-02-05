@@ -2,6 +2,7 @@ import HomePage from '../page-objects/homePage';
 import InputPage from '../page-objects/inputsPage';
 import CheckboxPage from '../page-objects/checkboxPage';
 import DropdownListPage from '../page-objects/dropdownListPage';
+import HoversPage from '../page-objects/hoversPage';
 
 describe('first site automated', () => {
 
@@ -28,7 +29,7 @@ describe('first site automated', () => {
         checkbox.uncheckBoxTwo();
     })
 
-    it.only('tests dropdown list section', () => {
+    it('tests dropdown list section', () => {
         const homePage = new HomePage();
         homePage.clickDropdownListTab();
 
@@ -37,10 +38,14 @@ describe('first site automated', () => {
         dropdownList.chooseSecondOption();
     })
 
-    it('testes hovers section', () => {
+    it.only('testes hovers section', () => {
         const homePage = new HomePage();
         homePage.clickHoversTab();
 
+        const hovers = new HoversPage();
+        hovers.hoverOverFirstElement();
+        hovers.hoverOverSecondElement();
+        hovers.hoverOverThirdElement();
     })
 
 });
