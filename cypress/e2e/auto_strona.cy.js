@@ -63,7 +63,7 @@ describe('first site automated', () => {
         basicAuthPage.inputValidCredentials();
     })
     
-    it.only('tests form section', () => {
+    it('tests form section', () => {
         const homePage = new HomePage();
         homePage.clickFormTab();
 
@@ -82,10 +82,12 @@ describe('first site automated', () => {
         dropdownListPage.chooseSecondOption();
     })
 
-    it('tests key presses section', () => {
+    it.only('tests key presses section', () => {
         const homePage = new HomePage();
         homePage.clickKeyPressesTab();
 
+        const keyPressesPage = new KeyPressesPage();
+        keyPressesPage.pressKey();
     })
     
     it('tests drag and drop section', () => {
