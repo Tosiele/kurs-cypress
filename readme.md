@@ -23,6 +23,7 @@
         })
 - it.only() -> podczas testowania przechodzi tylko przez ten przypadek testowy
 - xit() -> podczas testowania ignoruje ten przypadek testowy
+- beforeEach(()=>{}) -> funkcja która wykona się przed każdym przypadkiem testowym, deklarowana między describe a pierwszym item
 - decribe('*nazwa scenariusza*', () => {
 
      *przypadki testowe*   
