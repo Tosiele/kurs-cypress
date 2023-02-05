@@ -54,7 +54,7 @@ describe('first site automated', () => {
         inputPage.typeLetterToField();
     })
     
-    it.only('tests basic auth section', () => {
+    it('tests basic auth section', () => {
         const homePage = new HomePage();
         homePage.clickBasicAuthTab();
 
@@ -63,10 +63,14 @@ describe('first site automated', () => {
         basicAuthPage.inputValidCredentials();
     })
     
-    it('tests form section', () => {
+    it.only('tests form section', () => {
         const homePage = new HomePage();
         homePage.clickFormTab();
 
+        const formPage = new FormPage();
+        formPage.inputOnlyFirstName();
+        formPage.inputOnlyLastName();
+        formPage.inputBothNames();
     })
     
     it('tests dropdown list section', () => {
