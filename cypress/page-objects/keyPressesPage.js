@@ -1,6 +1,6 @@
 const input = '#target'
 const result = '#keyPressResult'
-const text = '1' //does not work on any "special" keys
+const text = '1'
 
 class KeyPressesPage {
 

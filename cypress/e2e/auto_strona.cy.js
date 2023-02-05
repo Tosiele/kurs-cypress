@@ -67,7 +67,7 @@ describe('first site automated', () => {
         basicAuthPage.inputValidCredentials();
     })
     
-    it.only('tests form section', () => {
+    it('tests form section', () => {
         const homePage = new HomePage();
         homePage.clickFormTab();
 
@@ -113,7 +113,7 @@ describe('first site automated', () => {
 
     })
 
-    it('tests status codes section', () => {
+    it.only('tests status codes section', () => {
         const homePage = new HomePage();
         homePage.clickStatusCodesTab();
         cy.wait(1000)
