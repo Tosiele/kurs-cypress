@@ -1,11 +1,12 @@
 import HomePage from '../page-objects/homePage';
 import InputPage from '../page-objects/inputsPage';
 import CheckboxPage from '../page-objects/checkboxPage';
+import DropdownListPage from '../page-objects/dropdownListPage';
 
 describe('first site automated', () => {
 
     beforeEach(() => {
-        crypto.visit('/');
+        cy.visit('/');
     });
 
     it('tests inputs section',() => {
@@ -27,14 +28,19 @@ describe('first site automated', () => {
         checkbox.uncheckBoxTwo();
     })
 
-    it('tests dropdown list section', () => {
+    it.only('tests dropdown list section', () => {
+        const homePage = new HomePage();
+        homePage.clickDropdownListTab();
 
-
+        const dropdownList = new DropdownListPage();
+        dropdownList.chooseFirstOption();
+        dropdownList.chooseSecondOption();
     })
 
     it('testes hovers section', () => {
-
+        const homePage = new HomePage();
+        homePage.clickHoversTab();
 
     })
-    
+
 });
